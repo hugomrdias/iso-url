@@ -2,6 +2,7 @@
 
 > Isomorphic/Univeral WHATWG URL API with some support legacy node URL API
 
+This package is a universal wrapper for node `url` and browser window.URL with support for legacy `url.parse` properties in the URL instance and defaults for base to support relative urls like `url.parse`.
 
 ## Install
 
@@ -9,36 +10,30 @@
 $ npm install iso-url
 ```
 
-
 ## Usage
 
 ```js
 const isoUrl = require('iso-url');
 
-isoUrl('unicorns');
-//=> 'unicorns & rainbows'
+const url = new isoUrl('http://localhost/unicorns');
 ```
-
 
 ## API
 
-### isoUrl(input, [options])
+### isoUrl(url, [base])
 
 #### input
 
 Type: `string`
 
-Lorem ipsum.
+The absolute or relative input URL to parse. If input is relative, then base is required. If input is absolute, the base is ignored.
 
-#### options
+#### base
 
-##### foo
+Type: `string|URL`  
+Default: `https://localhost` in node and `self.location.protocol + '//' + self.location.host` in the browser.
 
-Type: `boolean`<br>
-Default: `false`
-
-Lorem ipsum.
-
+The base URL to resolve against if the input is not absolute.
 
 ## License
 
