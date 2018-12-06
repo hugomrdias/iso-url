@@ -1,0 +1,58 @@
+{
+    "name": "iso-url",
+    "version": "0.0.0",
+    "description": "Isomorphic/Universal WHATWG URL API with some support legacy node URL API",
+    "repository": "hugomrdias/iso-url",
+    "author": "Hugo Dias <hugomrdias@gmail.com> (hugodias.me)",
+    "license": "MIT",
+    "main": "index.js",
+    "engines": {
+        "node": ">=10"
+    },
+    "browser": {
+        "index.js": "index-browser.js"
+    },
+    "scripts": {
+        "test": "nyc tape test.js | faucet",
+        "test:browser-local": "airtap --local test.js",
+        "lint": "eslint --cache *.js src/*.js",
+        "validate": "run-p lint test",
+        "precommit": "yarn validate",
+        "version": "yarn changelog && git add changelog.md",
+        "changelog": "conventional-changelog -p angular -i changelog.md -s -r 0",
+        "cov": "yarn test && nyc report --reporter=html && hs coverage -s -o -c-1",
+        "cov:report": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
+    },
+    "files": [
+        "index.js"
+    ],
+    "keywords": [
+        ""
+    ],
+    "dependencies": {},
+    "devDependencies": {
+        "airtap": "^0.1.0",
+        "ava": "^0.25.0",
+        "codecov": "^3.1.0",
+        "conventional-changelog-cli": "^2.0.11",
+        "eslint": "^4.7.0",
+        "eslint-config-halo": "^2.3.3",
+        "faucet": "^0.0.1",
+        "http-serve": "^1.0.1",
+        "husky": "^1.2.0",
+        "np": "^3.0.4",
+        "npm-run-all": "^4.1.1",
+        "nyc": "^13.1.0",
+        "tape": "^4.9.1"
+    },
+    "eslintConfig": {
+        "extends": "halo/node"
+    },
+    "eslintIgnore": [
+        "node_modules",
+        "coverage",
+        "dist",
+        "storybook-static",
+        "typings"
+    ]
+}
