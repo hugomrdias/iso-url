@@ -24,7 +24,8 @@
         "cov:report": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
     },
     "files": [
-        "index.js"
+        "index.js",
+        "index-browser.js"
     ],
     "keywords": [
         ""
