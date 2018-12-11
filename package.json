@@ -10,7 +10,7 @@
         "node": ">=10"
     },
     "browser": {
-        "index.js": "index-browser.js"
+        "./index.js": "./index-browser.js"
     },
     "scripts": {
         "test": "nyc tape test.js | faucet",
