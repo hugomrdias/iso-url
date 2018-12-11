@@ -1,3 +1,12 @@
+## [0.1.1](https://github.com/hugomrdias/iso-url/compare/v0.1.0...v0.1.1) (2018-12-11)
+
+
+### Bug Fixes
+
+* fix browser version ([b3b4a9d](https://github.com/hugomrdias/iso-url/commit/b3b4a9d))
+
+
+
 # [0.1.0](https://github.com/hugomrdias/iso-url/compare/v0.0.2...v0.1.0) (2018-12-10)
 
 
