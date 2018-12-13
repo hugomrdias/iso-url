@@ -1,3 +1,12 @@
+# [0.3.0](https://github.com/hugomrdias/iso-url/compare/v0.2.0...v0.3.0) (2018-12-13)
+
+
+### Features
+
+* support node 8 ([d09fd3c](https://github.com/hugomrdias/iso-url/commit/d09fd3c))
+
+
+
 # [0.2.0](https://github.com/hugomrdias/iso-url/compare/v0.1.0...v0.2.0) (2018-12-13)
 
 
