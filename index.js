@@ -1,6 +1,6 @@
 'use strict';
 
-const { URL, URLSearchParams } = require('url');
+const { URL, URLSearchParams, format } = require('url');
 
 // https://github.com/nodejs/node/issues/12682
 const defaultBase = 'http://localhost';
@@ -18,9 +18,14 @@ class URLWithLegacySupport extends URL {
                 this.search.slice(1) :
                 null;
     }
+
+    format() {
+        return this.toString();
+    }
 }
 
 module.exports = {
     URL: URLWithLegacySupport,
-    URLSearchParams
+    URLSearchParams,
+    format
 };

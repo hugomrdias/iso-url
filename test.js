@@ -80,3 +80,21 @@ test('throw with invalid href assign', (t) => {
         }, Error);
     }
 });
+
+test('format', (t) => {
+    t.plan(2);
+
+    const url = new URL('https://user:pass@sub.host.com:8080');
+
+    t.is(url.toString(), 'https://user:pass@sub.host.com:8080/');
+    t.is(url.format(), 'https://user:pass@sub.host.com:8080/');
+});
+
+test('format with options', (t) => {
+    t.plan(2);
+
+    const url = new URL('https://user:pass@sub.host.com:8080');
+
+    t.is(url.toString(), 'https://user:pass@sub.host.com:8080/');
+    t.is(url.format(), 'https://user:pass@sub.host.com:8080/');
+});

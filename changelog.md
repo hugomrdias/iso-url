@@ -1,4 +1,4 @@
-## [0.1.1](https://github.com/hugomrdias/iso-url/compare/v0.1.0...v0.1.1) (2018-12-11)
+## [0.1.2](https://github.com/hugomrdias/iso-url/compare/v0.1.0...v0.1.2) (2018-12-11)
 
 
 ### Bug Fixes

@@ -18,10 +18,26 @@ class URLWithLegacySupport extends URL {
                 this.search.slice(1) :
                 null;
     }
+
+    format() {
+        return this.toString();
+    }
+}
+
+function format(obj) {
+    if (typeof obj === 'string') {
+        obj = new URL(obj);
+    }
+    if (!(obj instanceof URL)) {
+        return URL.prototype.format.call(obj);
+    }
+
+    return obj.format();
 }
 
 module.exports = {
     URL: URLWithLegacySupport,
     URLSearchParams: self.URLSearchParams,
-    defaultBase
+    defaultBase,
+    format
 };
