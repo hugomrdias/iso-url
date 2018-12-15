@@ -22,5 +22,5 @@ module.exports = (url, location = {}, protocolMap = {}, defaultProtocol) => {
         host: location.host || urlParsed.host
     });
 
-    return new URL(url, format(base)).toString();
+    return new URLWithLegacySupport(url, format(base)).toString();
 };
