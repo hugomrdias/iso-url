@@ -1,3 +1,12 @@
+## [0.4.3](https://github.com/hugomrdias/iso-url/compare/v0.4.2...v0.4.3) (2018-12-15)
+
+
+### Bug Fixes
+
+* fix relative ([fd777aa](https://github.com/hugomrdias/iso-url/commit/fd777aa))
+
+
+
 ## [0.4.2](https://github.com/hugomrdias/iso-url/compare/v0.4.1...v0.4.2) (2018-12-15)
 
 
