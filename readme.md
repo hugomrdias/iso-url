@@ -13,7 +13,7 @@ $ npm install iso-url
 ## Usage
 
 ```js
-const { URL, URLSearchParams } = require('iso-url');
+const { URL, URLSearchParams, format, relative } = require('iso-url');
 
 const url = new isoUrl('http://localhost/unicorns');
 const newSearchParams = new URLSearchParams(url.searchParams);
@@ -21,7 +21,7 @@ const newSearchParams = new URLSearchParams(url.searchParams);
 
 ## API
 
-### isoUrl(url, [base])
+### new URL(url, [base])
 
 #### input
 
@@ -35,6 +35,14 @@ Type: `string|URL`
 Default: `https://localhost` in node and `self.location.protocol + '//' + self.location.host` in the browser.
 
 The base URL to resolve against if the input is not absolute.
+
+### format(url, [options])
+
+Same as https://nodejs.org/api/url.html#url_url_format_url_options
+
+### relative(url, [location], [protocalMap], [defaultProtocol])
+
+Same as https://github.com/dominictarr/relative-url but doesn't support this syntax `'//:9999'`
 
 ## License
 

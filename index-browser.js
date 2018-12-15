@@ -35,9 +35,24 @@ function format(obj) {
     return obj.format();
 }
 
+const relative = (
+    url,
+    base = defaultBase,
+    protocolMap = {},
+    defaultProtocol
+) => {
+    const b = new URLWithLegacySupport(base);
+    const protocolBase = b.protocol;
+
+    b.protocol = protocolMap[protocolBase] || b.protocol || defaultProtocol;
+
+    return new URLWithLegacySupport(url, b.toString());
+};
+
 module.exports = {
     URL: URLWithLegacySupport,
     URLSearchParams: self.URLSearchParams,
     defaultBase,
-    format
+    format,
+    relative
 };

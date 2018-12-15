@@ -24,8 +24,22 @@ class URLWithLegacySupport extends URL {
     }
 }
 
+const relative = (url, location = {}, protocolMap = {}, defaultProtocol) => {
+    let protocol = location.protocol ?
+        location.protocol.replace(':', '') :
+        'http';
+
+    // Check protocol map
+    protocol = (protocolMap[protocol] || defaultProtocol || protocol) + ':';
+
+    const b = Object.assign({}, location, { protocol });
+
+    return new URLWithLegacySupport(url, format(b)).toString();
+};
+
 module.exports = {
     URL: URLWithLegacySupport,
     URLSearchParams,
-    format
+    format,
+    relative
 };
