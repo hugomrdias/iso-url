@@ -1,7 +1,7 @@
 'use strict';
 
 const test = require('tape');
-const { URL, URLSearchParams, relative } = require('.');
+const { URL, URLSearchParams, relative } = require('./index.js');
 
 const isBrowser =
     typeof window === 'object' &&
@@ -99,11 +99,32 @@ test('format with options', (t) => {
     t.is(url.format(), 'https://user:pass@sub.host.com:8080/');
 });
 
+test('suppport ws', (t) => {
+    t.plan(2);
+
+    const url = new URL('ws://localhost:2134');
+
+    t.is(url.toString(), 'ws://localhost:2134/');
+    t.is(url.format(), 'ws://localhost:2134/');
+});
+
 const map = {
     http: 'ws',
     https: 'wss'
 };
 const def = 'ws';
+
+test('suppport ws in relative', (t) => {
+    t.plan(1);
+
+    t.is(relative('ws://localhost:2134'), 'ws://localhost:2134/');
+});
+
+test('suppport ws in relative with options', (t) => {
+    t.plan(1);
+
+    t.is(relative('ws://localhost:2134', {}, map, def), 'ws://localhost:2134/');
+});
 
 test('map from a relative url to one for this domain', (t) => {
     const location = {

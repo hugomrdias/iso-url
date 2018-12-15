@@ -10,10 +10,10 @@
         "node": ">=8"
     },
     "browser": {
-        "./index.js": "./index-browser.js"
+        "./src/url.js": "./src/url-browser.js"
     },
     "scripts": {
-        "test": "nyc tape test.js | faucet",
+        "test": "nyc tape test.js",
         "test:browser-local": "airtap --local test.js",
         "lint": "eslint --cache *.js src/*.js",
         "validate": "run-p lint test",
@@ -37,7 +37,6 @@
         "conventional-changelog-cli": "^2.0.11",
         "eslint": "^4.7.0",
         "eslint-config-halo": "^2.3.3",
-        "faucet": "^0.0.1",
         "http-serve": "^1.0.1",
         "husky": "^1.2.0",
         "np": "^3.0.4",
