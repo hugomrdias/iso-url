@@ -1,3 +1,12 @@
+## [0.4.2](https://github.com/hugomrdias/iso-url/compare/v0.4.1...v0.4.2) (2018-12-15)
+
+
+### Bug Fixes
+
+* add @ to auth in format ([33c8406](https://github.com/hugomrdias/iso-url/commit/33c8406))
+
+
+
 ## [0.4.1](https://github.com/hugomrdias/iso-url/compare/v0.4.0...v0.4.1) (2018-12-15)
 
 
