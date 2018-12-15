@@ -34,7 +34,7 @@ function format(obj) {
     if (!(obj instanceof URL)) {
         const auth = obj.username ?
             `${obj.username}:${obj.password}@` :
-            obj.auth || '';
+            obj.auth + '@' || '';
         const port = obj.port ? ':' + obj.port : '';
         const protocol = obj.protocol ? obj.protocol + '//' : '';
         const host = obj.host || '';
