@@ -1,3 +1,7 @@
+# [0.4.0](https://github.com/hugomrdias/iso-url/compare/v0.3.0...v0.4.0) (2018-12-15)
+
+
+
 # [0.3.0](https://github.com/hugomrdias/iso-url/compare/v0.2.0...v0.3.0) (2018-12-13)
 
 
