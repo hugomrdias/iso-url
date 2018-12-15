@@ -1,3 +1,12 @@
+## [0.4.4](https://github.com/hugomrdias/iso-url/compare/v0.4.3...v0.4.4) (2018-12-15)
+
+
+### Bug Fixes
+
+* add stuff to npm ([b2ecb35](https://github.com/hugomrdias/iso-url/commit/b2ecb35))
+
+
+
 ## [0.4.3](https://github.com/hugomrdias/iso-url/compare/v0.4.2...v0.4.3) (2018-12-15)
 
 
