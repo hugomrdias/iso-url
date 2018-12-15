@@ -1,3 +1,13 @@
+## [0.4.1](https://github.com/hugomrdias/iso-url/compare/v0.4.0...v0.4.1) (2018-12-15)
+
+
+### Bug Fixes
+
+* better support format in the browser ([77070e5](https://github.com/hugomrdias/iso-url/commit/77070e5))
+* better support format in the browser ([9c2d83b](https://github.com/hugomrdias/iso-url/commit/9c2d83b))
+
+
+
 # [0.4.0](https://github.com/hugomrdias/iso-url/compare/v0.3.0...v0.4.0) (2018-12-15)
 
 
