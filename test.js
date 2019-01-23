@@ -126,6 +126,34 @@ test('suppport ws in relative with options', (t) => {
     t.is(relative('ws://localhost:2134', {}, map, def), 'ws://localhost:2134/');
 });
 
+test('suppport wss in relative from an http location object', (t) => {
+    t.plan(1);
+
+    t.is(
+        relative(
+            'wss://localhost:4433',
+            {
+                host: 'localhost:3000',
+                hostname: 'localhost',
+                href: 'http://localhost:3000/',
+                origin: 'http://localhost:3000',
+                pathname: '/debug.html',
+                port: '3000',
+                protocol: 'http:'
+            },
+            map,
+            def
+        ),
+        'wss://localhost:4433/'
+    );
+});
+
+test('test handle ipv6 with brackets', (t) => {
+    t.plan(1);
+
+    t.is(relative('wss://[::1]:4002', {}, map, def), 'wss://[::1]:4002/');
+});
+
 test('map from a relative url to one for this domain', (t) => {
     const location = {
         protocol: 'http',
