@@ -1,6 +1,6 @@
 {
     "name": "iso-url",
-    "version": "0.4.5",
+    "version": "0.4.6",
     "description": "Isomorphic/Universal WHATWG URL API with some support legacy node URL API",
     "repository": "hugomrdias/iso-url",
     "author": "Hugo Dias <hugomrdias@gmail.com> (hugodias.me)",

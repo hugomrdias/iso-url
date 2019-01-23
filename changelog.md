@@ -1,3 +1,12 @@
+## [0.4.6](https://github.com/hugomrdias/iso-url/compare/v0.4.5...v0.4.6) (2019-01-23)
+
+
+### Bug Fixes
+
+* revert np to be able to support node 8 ([9477e50](https://github.com/hugomrdias/iso-url/commit/9477e50))
+
+
+
 ## [0.4.5](https://github.com/hugomrdias/iso-url/compare/v0.4.4...v0.4.5) (2019-01-23)
 
 
