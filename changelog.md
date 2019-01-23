@@ -1,3 +1,12 @@
+## [0.4.5](https://github.com/hugomrdias/iso-url/compare/v0.4.4...v0.4.5) (2019-01-23)
+
+
+### Bug Fixes
+
+* fix browser version with delegation and format handling of auth ([fafd253](https://github.com/hugomrdias/iso-url/commit/fafd253))
+
+
+
 ## [0.4.4](https://github.com/hugomrdias/iso-url/compare/v0.4.3...v0.4.4) (2018-12-15)
 
 
