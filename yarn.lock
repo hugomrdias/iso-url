@@ -195,9 +195,9 @@ adm-zip@~0.4.x:
   integrity sha512-fERNJX8sOXfel6qCBCMPvZLzENBEhZTzKqg6vrOW5pvoEaQuJhRU4ndTAh6lHOxn1I6jnz2NHra56ZODM751uw==
 
 airtap@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/airtap/-/airtap-2.0.1.tgz#74fcb2d7080e29f99b0236765f2e50c88fb7447d"
-  integrity sha512-0aVYtACiALmxNPpjsbs4Mz5fv7tGY2NAoPR0fSMWDPex8BkxNlFr2Gbp5DvXjmXocAy66qJMtNyMDjmb8OBA8g==
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/airtap/-/airtap-2.0.2.tgz#8b713171d0e06c8f75387978f399c0ea29e1d2aa"
+  integrity sha512-DkRboiF4pLp5Jir/x7GG9BGrGhv3KVP4eoWFg57eOAuqI4V49JNlLjctjISq8PaZVm3v/P9WEdkeS3RLsgmp1w==
   dependencies:
     batch "~0.6.1"
     body-parser "~1.18.3"
@@ -1777,14 +1777,7 @@ debug@^3.1.0:
   dependencies:
     ms "^2.1.1"
 
-debug@^4.1.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/debug/-/debug-4.1.0.tgz#373687bffa678b38b1cd91f861b63850035ddc87"
-  integrity sha512-heNPJUJIqC+xB6ayLAMHaIrmN9HKa7aQO8MGqKpvCA+uJYVcvR6l5kgdrhRuwPFHU7P5/A1w0BjByPHwpfTDKg==
-  dependencies:
-    ms "^2.1.1"
-
-debug@~4.1.0:
+debug@^4.1.0, debug@~4.1.0:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/debug/-/debug-4.1.1.tgz#3b72260255109c6b589cee050f1d516139664791"
   integrity sha512-pYAIzeRo8J6KPEaJ0VWOh5Pzkbw/RetuzehGM7QRRX5he4fPHx2rdKMB256ehJCkX+XRQm16eZLqLNS8RSZXZw==
