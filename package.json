@@ -13,8 +13,8 @@
         "./src/url.js": "./src/url-browser.js"
     },
     "scripts": {
-        "test": "nyc tape test.js",
-        "test:browser-local": "airtap --local test.js",
+        "test": "nyc tape test.js | tap-spec",
+        "test:browser": "playwright-test --runner tape | tap-spec",
         "lint": "eslint --cache *.js src/*.js",
         "validate": "run-p lint test",
         "precommit": "yarn validate",
@@ -28,21 +28,24 @@
         "index.js"
     ],
     "keywords": [
-        ""
+        "url",
+        "node",
+        "browser"
     ],
     "dependencies": {},
     "devDependencies": {
-        "airtap": "^2.0.1",
-        "codecov": "^3.1.0",
-        "conventional-changelog-cli": "^2.0.11",
+        "codecov": "^3.6.5",
+        "conventional-changelog-cli": "^2.0.31",
         "eslint": "^4.7.0",
         "eslint-config-halo": "^2.3.3",
         "http-serve": "^1.0.1",
-        "husky": "^3.0.2",
-        "np": "^5.0.2",
+        "husky": "^4.2.3",
+        "np": "^6.2.0",
         "npm-run-all": "^4.1.1",
-        "nyc": "^14.1.1",
-        "tape": "^4.9.2"
+        "nyc": "^15.0.0",
+        "playwright-test": "^0.4.0",
+        "tap-spec": "^5.0.0",
+        "tape": "^4.13.2"
     },
     "eslintConfig": {
         "extends": "halo/node"
