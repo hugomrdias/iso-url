@@ -29,7 +29,6 @@ addons:
 script:
     - yarn test
     - yarn test:browser
-    - yarn playwright-test --runner tape --browser firefox
 after_script:
     - "yarn cov:report"
 
