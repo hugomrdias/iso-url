@@ -4,7 +4,8 @@ node_js:
     - "12"
     - "13"
 
-# addons:
+addons:
+    firefox: latest
 #     apt:
 #         packages:
 #             # These are required to run webkit
