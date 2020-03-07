@@ -3,6 +3,7 @@
 const test = require('tape');
 const { URL, URLSearchParams, relative } = require('./index.js');
 
+const isFirefox = typeof navigator !== 'undefined' && /^(?!.*Seamonkey)(?=.*Firefox).*/i.test(navigator.userAgent);
 const isBrowser =
     typeof window === 'object' &&
     typeof document === 'object' &&
@@ -70,10 +71,10 @@ test('throw with invalid href assign', (t) => {
     t.plan(1);
     const url = new URL('https://user:pass@sub.host.com:8080');
 
-    if (isBrowser) {
+    if (isBrowser && !isFirefox) {
         // browser doesn't throw but cleans the instance
         url.href = '/ll';
-        t.is(url.host, '');
+        t.ok(url.host === '' || url.host === 'localhost:3000');
     } else {
         t.throws(() => {
             url.href = '/ll';
