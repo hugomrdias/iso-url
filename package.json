@@ -7,7 +7,7 @@
     "license": "MIT",
     "main": "index.js",
     "engines": {
-        "node": ">=8"
+        "node": ">=10"
     },
     "browser": {
         "./src/url.js": "./src/url-browser.js"
@@ -16,11 +16,7 @@
         "test": "nyc tape test.js | tap-spec",
         "test:browser": "playwright-test --runner tape | tap-spec",
         "lint": "eslint --cache *.js src/*.js",
-        "validate": "run-p lint test",
-        "precommit": "yarn validate",
-        "version": "yarn changelog && git add changelog.md",
-        "changelog": "conventional-changelog -p angular -i changelog.md -s -r 0",
-        "cov": "yarn test && nyc report --reporter=html && hs coverage -s -o -c-1",
+        "cov": "yarn test && nyc report --reporter=html && sirv coverage",
         "cov:report": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
     },
     "files": [
@@ -34,18 +30,36 @@
     ],
     "dependencies": {},
     "devDependencies": {
+        "@commitlint/cli": "^8.3.5",
+        "@commitlint/config-conventional": "^8.3.4",
         "codecov": "^3.6.5",
-        "conventional-changelog-cli": "^2.0.31",
         "eslint": "^4.7.0",
         "eslint-config-halo": "^2.3.3",
         "http-serve": "^1.0.1",
         "husky": "^4.2.3",
+        "lint-staged": "^10.0.7",
         "np": "^6.2.0",
-        "npm-run-all": "^4.1.1",
         "nyc": "^15.0.0",
         "playwright-test": "^0.4.0",
+        "sirv-cli": "^0.4.2",
         "tap-spec": "^5.0.0",
         "tape": "^4.13.2"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged && yarn test && yarn test:browser",
+            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+        }
+    },
+    "lint-staged": {
+        "*.js": [
+            "eslint --fix"
+        ]
+    },
+    "commitlint": {
+        "extends": [
+            "@commitlint/config-conventional"
+        ]
     },
     "eslintConfig": {
         "extends": "halo/node"
