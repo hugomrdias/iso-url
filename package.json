@@ -34,7 +34,6 @@
         "@commitlint/config-conventional": "^8.3.4",
         "eslint": "^4.7.0",
         "eslint-config-halo": "^2.3.3",
-        "http-serve": "^1.0.1",
         "husky": "^4.2.3",
         "lint-staged": "^10.0.7",
         "np": "^6.2.0",
