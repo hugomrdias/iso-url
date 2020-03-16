@@ -5129,10 +5129,10 @@ playwright-core@0.11.1:
     uuid "^3.4.0"
     ws "^6.1.0"
 
-playwright-test@^0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/playwright-test/-/playwright-test-0.4.0.tgz#62b321d4ee7259be6bd9dbada5024dce8ec6b2a2"
-  integrity sha512-Ib9QSwgT1lCcGMZCtddmJsNbnUYisoCb92yphZRZXel6CF2LmL8qGj1G0LxXhEMqha8OfwaOymLmgOELjn2cLw==
+playwright-test@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/playwright-test/-/playwright-test-0.5.0.tgz#a9b0759853b8002e8981f8a2ee290c56b0c8100d"
+  integrity sha512-5ElW740I1rDItHN6lym+PTW9PMQaMTvkXfGreJd2gE8Yc1AQ9vIZFnHgnREiJLqeFsE0FcZXMDyX01AOEBorVQ==
   dependencies:
     camelcase "^5.3.1"
     delay "^4.3.0"
