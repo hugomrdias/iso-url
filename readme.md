@@ -50,4 +50,4 @@ Same as https://github.com/dominictarr/relative-url but doesn't support this syn
 
 ## License
 
-MIT © [Hugo Dias](http://hugodias.me)
+MIT © [Hugo Dias](http://hugodias.me)   
