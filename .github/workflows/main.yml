@@ -28,6 +28,8 @@ jobs:
     - run: yarn test
     - run: yarn test:browser
     - run: yarn cov:report
+    - uses: codecov/codecov-action@v1
+
 
   webkit_macos:
     name: "Webkit Mac"

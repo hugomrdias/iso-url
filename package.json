@@ -17,7 +17,7 @@
         "test:browser": "playwright-test --runner tape | tap-spec",
         "lint": "eslint --cache *.js src/*.js",
         "cov": "yarn test && nyc report --reporter=html && sirv coverage",
-        "cov:report": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
+        "cov:report": "nyc report --reporter=text-lcov > coverage.lcov"
     },
     "files": [
         "src",
