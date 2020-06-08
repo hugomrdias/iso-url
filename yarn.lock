@@ -4440,9 +4440,9 @@ normalize-url@^3.1.0:
   integrity sha512-U+JJi7duF1o+u2pynbp2zXDW2/PADgC30f0GsHZtRh+HOcXHnw137TrNlyxxRvWW5fjKd3bcLHPxofWuCjaeZg==
 
 np@^6.2.0:
-  version "6.2.2"
-  resolved "https://registry.yarnpkg.com/np/-/np-6.2.2.tgz#a63b19d00f444361d4c0103cc4c89263c3538fc5"
-  integrity sha512-C+5nIA9wnXlSK63TcoI5ajszCvjLVdXM9zC/4i80ewdxvGGeSiDlzo8bNbZ2LYBLNoezT487bE5J3qIzthIhGQ==
+  version "6.2.4"
+  resolved "https://registry.yarnpkg.com/np/-/np-6.2.4.tgz#1cab1188b9764ae7794ec740a6881c52910337d9"
+  integrity sha512-3ChpSEnrQQGSH5kU8qei/vfmQRI8mggPjDvrIvGUBkAjCO0u3b3xTuraefJADZps0dGsblzcSXc5ZrAWcQAbaQ==
   dependencies:
     "@samverschueren/stream-to-observable" "^0.3.0"
     any-observable "^0.5.0"
@@ -5653,14 +5653,7 @@ rx-lite@*, rx-lite@^4.0.8:
   resolved "https://registry.yarnpkg.com/rx-lite/-/rx-lite-4.0.8.tgz#0b1e11af8bc44836f04a6407e92da42467b79444"
   integrity sha1-Cx4Rr4vESDbwSmQH6S2kJGe3lEQ=
 
-rxjs@^6.3.3, rxjs@^6.4.0, rxjs@^6.5.3, rxjs@^6.5.4:
-  version "6.5.4"
-  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.5.4.tgz#e0777fe0d184cec7872df147f303572d414e211c"
-  integrity sha512-naMQXcgEo3csAEGvw/NydRA0fuS2nDZJiw1YUWFKU7aPPAPGZEsD4Iimit96qwCieH6y614MCLYwdkrWx7z/7Q==
-  dependencies:
-    tslib "^1.9.0"
-
-rxjs@^6.5.5:
+rxjs@^6.3.3, rxjs@^6.4.0, rxjs@^6.5.3, rxjs@^6.5.4, rxjs@^6.5.5:
   version "6.5.5"
   resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.5.5.tgz#c5c884e3094c8cfee31bf27eb87e54ccfc87f9ec"
   integrity sha512-WfQI+1gohdf0Dai/Bbmk5L5ItH5tYqm3ki2c5GdWhKjalzjg93N3avFjVStyZZz+A2Em+ZxKH5bNghw9UeylGQ==
