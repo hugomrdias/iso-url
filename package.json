@@ -41,7 +41,7 @@
         "playwright-test": "^0.7.1",
         "sirv-cli": "^1.0.3",
         "tap-spec": "^5.0.0",
-        "tape": "^4.13.2"
+        "tape": "^5.0.1"
     },
     "husky": {
         "hooks": {
