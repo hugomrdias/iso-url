@@ -30,18 +30,18 @@
     ],
     "dependencies": {},
     "devDependencies": {
-        "@commitlint/cli": "^9.0.1",
-        "@commitlint/config-conventional": "^9.0.1",
+        "@commitlint/cli": "^9.1.2",
+        "@commitlint/config-conventional": "^9.1.2",
         "eslint": "^4.7.0",
         "eslint-config-halo": "^2.3.3",
         "husky": "^4.2.3",
         "lint-staged": "^10.0.7",
-        "np": "^6.2.0",
+        "np": "^6.4.0",
         "nyc": "^15.0.0",
         "playwright-test": "^0.7.1",
-        "sirv-cli": "^1.0.3",
+        "sirv-cli": "^1.0.6",
         "tap-spec": "^5.0.0",
-        "tape": "^4.13.2"
+        "tape": "^5.0.1"
     },
     "husky": {
         "hooks": {
