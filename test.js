@@ -9,6 +9,26 @@ const isBrowser =
     typeof document === 'object' &&
     document.nodeType === 9;
 
+test('unspecified base should not throw', (t) => {
+    t.plan(1);
+
+    if (isBrowser) {
+        t.doesNotThrow(() => new URL('http://localhost'));
+    } else {
+        // Hack to force construction of a browser URL in Node to simulate a React Native-like environment where .location does not exist
+        global.self = {
+            URL: global.URL,
+            URLSearchParams: global.URLSearchParams
+        };
+        /* eslint-disable-next-line global-require */
+        const { URLWithLegacySupport: URL } = require('./src/url-browser');
+
+        t.doesNotThrow(() => new URL('http://localhost'));
+
+        delete global.self;
+    }
+});
+
 test('relative', (t) => {
     t.plan(1);
 
