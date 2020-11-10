@@ -38,7 +38,7 @@
         "lint-staged": "^10.0.7",
         "np": "^6.4.0",
         "nyc": "^15.0.0",
-        "playwright-test": "^0.7.1",
+        "playwright-test": "^1.0.0",
         "sirv-cli": "^1.0.6",
         "tap-spec": "^5.0.0",
         "tape": "^5.0.1"
