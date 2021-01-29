@@ -1,8 +1,19 @@
 'use strict'
 
-const defaultBase =
-    self.location && self.location.protocol + '//' + self.location.host
+function getDefaultBase () {
+  if (!self.location) {
+    return
+  }
+
+  if (!self.location.protocol || !self.location.host) {
+    return
+  }
+
+  return self.location.protocol + '//' + self.location.host
+}
+
 const URL = self.URL
+const defaultBase = getDefaultBase()
 
 class URLWithLegacySupport {
   constructor (url = '', base = defaultBase) {
