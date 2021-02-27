@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - uses: microsoft/playwright-github-action@v1
-    - run: yarn
+    - uses: bahmutov/npm-install@v1
     - run: yarn run check
     - uses: codecov/codecov-action@v1
 
@@ -26,7 +26,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - uses: microsoft/playwright-github-action@v1
-    - run: yarn
+    - uses: bahmutov/npm-install@v1
     - run: npx playwright-test --runner tape --browser webkit
 
   firefox_linux:
@@ -35,5 +35,5 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - uses: microsoft/playwright-github-action@v1
-    - run: yarn
+    - uses: bahmutov/npm-install@v1
     - run: npx playwright-test --runner tape --browser firefox
