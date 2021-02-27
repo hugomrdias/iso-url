@@ -3559,10 +3559,10 @@ playwright-core@1.8.1:
     rimraf "^3.0.2"
     ws "^7.3.1"
 
-playwright-test@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/playwright-test/-/playwright-test-2.0.1.tgz#57783bb4a987bef34e60631cd914954d458c826d"
-  integrity sha512-tHaG9cO6S4/TVVqFyjsN9Tn9zgW+72ZU1mMOZxx93LdlM2kCFlTrWE2zu846o7AQLzfpFUoqPEVZNGNydXIadQ==
+playwright-test@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/playwright-test/-/playwright-test-2.0.2.tgz#59dafd43b6c4058f639b4a269a4340045b66ebba"
+  integrity sha512-rBnXLrIn4PncucIDzZ2Y7neakvO0VtWIA1iZp36nlODQknc8qGZpaOddAaYiLnaX8bvOCNmiQcy3i5J9PQuC4g==
   dependencies:
     camelcase "^6.2.0"
     delay "^5.0.0"
