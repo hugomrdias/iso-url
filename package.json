@@ -14,9 +14,9 @@
     },
     "scripts": {
         "test": "nyc tape test.js | tap-spec",
-        "test:browser": "playwright-test --runner tape | tap-spec",
+        "test:browser": "playwright-test --runner tape --cov | tap-spec",
         "lint": "eslint --cache *.js src/*.js",
-        "cov": "yarn test && nyc report --reporter=html && sirv coverage",
+        "cov": "yarn test && yarn test:browser && nyc report --reporter=html && sirv coverage",
         "cov:report": "nyc report --reporter=text-lcov > coverage.lcov"
     },
     "files": [
@@ -30,43 +30,17 @@
     ],
     "dependencies": {},
     "devDependencies": {
-        "@commitlint/cli": "^11.0.0",
-        "@commitlint/config-conventional": "^11.0.0",
-        "eslint": "^4.7.0",
-        "eslint-config-halo": "^2.3.3",
-        "husky": "^4.2.3",
-        "lint-staged": "^10.0.7",
-        "np": "^7.0.0",
+        "eslint": "^7.20.0",
+        "eslint-config-ipfs": "^2.0.0",
+        "np": "^7.4.0",
         "nyc": "^15.0.0",
-        "playwright-test": "^1.0.0",
-        "sirv-cli": "^1.0.6",
+        "playwright-test": "^2.0.1",
+        "sirv-cli": "^1.0.11",
         "tap-spec": "^5.0.0",
-        "tape": "^5.0.1"
-    },
-    "husky": {
-        "hooks": {
-            "pre-commit": "lint-staged && yarn test && yarn test:browser",
-            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-        }
-    },
-    "lint-staged": {
-        "*.js": [
-            "eslint --fix"
-        ]
-    },
-    "commitlint": {
-        "extends": [
-            "@commitlint/config-conventional"
-        ]
+        "tape": "^5.2.0",
+        "typescript": "^4.2.2"
     },
     "eslintConfig": {
-        "extends": "halo/node"
-    },
-    "eslintIgnore": [
-        "node_modules",
-        "coverage",
-        "dist",
-        "storybook-static",
-        "typings"
-    ]
+        "extends": "ipfs"
+    }
 }
