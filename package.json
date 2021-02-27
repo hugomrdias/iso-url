@@ -7,37 +7,43 @@
     "license": "MIT",
     "main": "index.js",
     "engines": {
-        "node": ">=10"
+        "node": ">=14"
     },
     "browser": {
         "./src/url.js": "./src/url-browser.js"
     },
     "scripts": {
-        "test": "nyc tape test.js | tap-spec",
-        "test:browser": "playwright-test --runner tape --cov | tap-spec",
-        "lint": "eslint --cache *.js src/*.js",
-        "cov": "yarn test && yarn test:browser && nyc report --reporter=html && sirv coverage",
-        "cov:report": "nyc report --reporter=text-lcov > coverage.lcov"
+        "check": "yarn lint && yarn prepare && yarn test && yarn test:browser",
+        "prepare": "tsc",
+        "test": "c8 -r json --report-dir .nyc_output --clean fresh-tape test.js | tap-spec",
+        "test:browser": "playwright-test test.js --runner tape --cov | tap-spec",
+        "lint": "eslint *.js src/*.js",
+        "cov": "yarn test && yarn test:browser && nyc report --reporter=html && sirv coverage"
     },
     "files": [
+        "dist/src",
+        "dist/index.js",
         "src",
         "index.js"
     ],
+    "types": "dist/index.js",
     "keywords": [
         "url",
         "node",
         "browser"
     ],
-    "dependencies": {},
+    "dependencies": {
+    },
     "devDependencies": {
+        "c8": "^7.6.0",
         "eslint": "^7.20.0",
         "eslint-config-ipfs": "^2.0.0",
+        "fresh-tape": "^5.1.1",
         "np": "^7.4.0",
         "nyc": "^15.0.0",
         "playwright-test": "^2.0.1",
         "sirv-cli": "^1.0.11",
         "tap-spec": "^5.0.0",
-        "tape": "^5.2.0",
         "typescript": "^4.2.2"
     },
     "eslintConfig": {

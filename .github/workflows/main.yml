@@ -1,6 +1,3 @@
-# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
-
 name: tests
 env:
   CI: true
@@ -17,17 +14,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - uses: actions/setup-node@v1
-      with:
-        node-version: '12.x'
-    - name: Install required packages
-      run: |
-        sudo apt-get update
-        sudo apt-get install libgbm-dev
+    - uses: microsoft/playwright-github-action@v1
     - run: yarn
-    - run: yarn test
-    - run: yarn test:browser
-    - run: yarn cov:report
+    - run: yarn run check
     - uses: codecov/codecov-action@v1
 
 
@@ -36,9 +25,7 @@ jobs:
     runs-on: macos-latest
     steps:
     - uses: actions/checkout@v2
-    - uses: actions/setup-node@v1
-      with:
-        node-version: '12.x'
+    - uses: microsoft/playwright-github-action@v1
     - run: yarn
     - run: npx playwright-test --runner tape --browser webkit
 
@@ -47,8 +34,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - uses: actions/setup-node@v1
-      with:
-        node-version: '12.x'
+    - uses: microsoft/playwright-github-action@v1
     - run: yarn
     - run: npx playwright-test --runner tape --browser firefox
