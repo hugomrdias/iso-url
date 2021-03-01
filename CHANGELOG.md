@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.1.2](https://www.github.com/hugomrdias/iso-url/compare/v1.1.1...v1.1.2) (2021-03-01)
+
+
+### Bug Fixes
+
+* types extension ([6a012a9](https://www.github.com/hugomrdias/iso-url/commit/6a012a93d290d116a99b733d5be901ccf7813663))
+
 ### [1.1.1](https://www.github.com/hugomrdias/iso-url/compare/v1.1.0...v1.1.1) (2021-03-01)
 
 
