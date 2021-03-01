@@ -22,7 +22,7 @@
   },
   "files": [
     "dist/src",
-    "dist/index.d.js",
+    "dist/index.d.ts",
     "dist/index.d.ts.map",
     "src",
     "index.js"
