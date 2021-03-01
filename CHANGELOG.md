@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.1.1](https://www.github.com/hugomrdias/iso-url/compare/v1.1.0...v1.1.1) (2021-03-01)
+
+
+### Bug Fixes
+
+* fix exported types ([14ad22c](https://www.github.com/hugomrdias/iso-url/commit/14ad22c1fd69c2fe1744adbefeca6b2e9388a41d))
+
 ## [1.1.0](https://www.github.com/hugomrdias/iso-url/compare/v1.0.0...v1.1.0) (2021-03-01)
 
 
