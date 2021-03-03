@@ -1,12 +1,12 @@
 'use strict'
 
-function getDefaultBase () {
-  if (!self.location) {
-    return
-  }
+const isReactNative =
+    typeof navigator !== 'undefined' &&
+    navigator.product === 'ReactNative'
 
-  if (!self.location.protocol || !self.location.host) {
-    return
+function getDefaultBase () {
+  if (isReactNative) {
+    return 'http://localhost'
   }
 
   return self.location.protocol + '//' + self.location.host
