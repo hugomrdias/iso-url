@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.1.3](https://www.github.com/hugomrdias/iso-url/compare/v1.1.2...v1.1.3) (2021-03-03)
+
+
+### Bug Fixes
+
+* add better guard against location definition ([#154](https://www.github.com/hugomrdias/iso-url/issues/154)) ([9dc71a9](https://www.github.com/hugomrdias/iso-url/commit/9dc71a9f505d39834861344c6696b0ca513400ad))
+
 ### [1.1.2](https://www.github.com/hugomrdias/iso-url/compare/v1.1.1...v1.1.2) (2021-03-01)
 
 
