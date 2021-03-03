@@ -12,11 +12,11 @@ const isBrowser =
     document.nodeType === 9
 
 test('unspecified base should use default and not throw', (t) => {
-  t.plan(2)
-
   if (isBrowser) {
+    t.plan(1)
     t.doesNotThrow(() => new URL('http://localhost'))
   } else {
+    t.plan(2)
     // Hack to force the construction of a browser URL in Node to simulate a React Native-like environment where .location may or may not exist
     // When it does exist, then both host and protocol must exist as well
     // @ts-ignore
