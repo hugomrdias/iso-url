@@ -33,7 +33,6 @@
     "node",
     "browser"
   ],
-  "dependencies": {},
   "devDependencies": {
     "c8": "^7.6.0",
     "eslint": "^7.20.0",

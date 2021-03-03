@@ -11,17 +11,20 @@ const isBrowser =
     typeof document === 'object' &&
     document.nodeType === 9
 
-test('unspecified base should not throw', (t) => {
-  t.plan(1)
-
+test('unspecified base should use default and not throw', (t) => {
   if (isBrowser) {
+    t.plan(1)
     t.doesNotThrow(() => new URL('http://localhost'))
   } else {
-    // Hack to force construction of a browser URL in Node to simulate a React Native-like environment where .location does not exist
+    t.plan(2)
+    // Hack to force the construction of a browser URL in Node to simulate a React Native-like environment where .location may or may not exist
+    // When it does exist, then both host and protocol must exist as well
     // @ts-ignore
     global.self = {
       URL: global.URL,
-      URLSearchParams: global.URLSearchParams
+      URLSearchParams: global.URLSearchParams,
+      // @ts-ignore
+      location: {}
     }
     /* eslint-disable-next-line global-require */
     const { URLWithLegacySupport: URL } = require('./src/url-browser')
@@ -29,7 +32,9 @@ test('unspecified base should not throw', (t) => {
     t.doesNotThrow(() => new URL('http://localhost'))
 
     // @ts-ignore
-    delete global.self
+    delete global.self.location
+
+    t.doesNotThrow(() => new URL('http://localhost'))
   }
 })
 
