@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.1.4](https://www.github.com/hugomrdias/iso-url/compare/v1.1.3...v1.1.4) (2021-03-04)
+
+
+### Bug Fixes
+
+* add react native tests ([#176](https://www.github.com/hugomrdias/iso-url/issues/176)) ([60ada92](https://www.github.com/hugomrdias/iso-url/commit/60ada92b4b1a1a538cc9473f3dcca73947a57c5d))
+
 ### [1.1.3](https://www.github.com/hugomrdias/iso-url/compare/v1.1.2...v1.1.3) (2021-03-03)
 
 
