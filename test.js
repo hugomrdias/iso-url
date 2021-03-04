@@ -1,6 +1,6 @@
 'use strict'
 
-const test = require('fresh-tape')
+const { test, skip } = require('zora')
 const { URL, URLSearchParams, relative } = require('./index.js')
 
 const isFirefox =
@@ -11,36 +11,11 @@ const isBrowser =
     typeof document === 'object' &&
     document.nodeType === 9
 
-test('unspecified base should use default and not throw', (t) => {
-  if (isBrowser) {
-    t.plan(1)
-    t.doesNotThrow(() => new URL('http://localhost'))
-  } else {
-    t.plan(2)
-    // Hack to force the construction of a browser URL in Node to simulate a React Native-like environment where .location may or may not exist
-    // When it does exist, then both host and protocol must exist as well
-    // @ts-ignore
-    global.self = {
-      URL: global.URL,
-      URLSearchParams: global.URLSearchParams,
-      // @ts-ignore
-      location: {}
-    }
-    /* eslint-disable-next-line global-require */
-    const { URLWithLegacySupport: URL } = require('./src/url-browser')
-
-    t.doesNotThrow(() => new URL('http://localhost'))
-
-    // @ts-ignore
-    delete global.self.location
-
-    t.doesNotThrow(() => new URL('http://localhost'))
-  }
+test('unspecified base should not throw', (t) => {
+  t.doesNotThrow(() => new URL('http://localhost'))
 })
 
 test('relative', (t) => {
-  t.plan(1)
-
   const url = new URL('/test')
 
   if (isBrowser) {
@@ -54,8 +29,6 @@ test('relative', (t) => {
 })
 
 test('full properties', (t) => {
-  t.plan(11)
-
   const url = new URL(
     'https://user:pass@sub.host.com:8080/p/a/t/h?query=string#hash'
   )
@@ -77,8 +50,6 @@ test('full properties', (t) => {
 })
 
 test('legacy properties', (t) => {
-  t.plan(3)
-
   const url = new URL(
     'https://user:pass@sub.host.com:8080/p/a/t/h?query=string#hash'
   )
@@ -89,15 +60,12 @@ test('legacy properties', (t) => {
 })
 
 test('last slash', (t) => {
-  t.plan(1)
-
   const url = new URL('https://user:pass@sub.host.com:8080')
 
   t.is(url.href, 'https://user:pass@sub.host.com:8080/')
 })
 
 test('throw with invalid href assign', (t) => {
-  t.plan(1)
   const url = new URL('https://user:pass@sub.host.com:8080')
 
   if (isBrowser && !isFirefox) {
@@ -112,8 +80,6 @@ test('throw with invalid href assign', (t) => {
 })
 
 test('format', (t) => {
-  t.plan(2)
-
   const url = new URL('https://user:pass@sub.host.com:8080')
 
   t.is(url.toString(), 'https://user:pass@sub.host.com:8080/')
@@ -121,8 +87,6 @@ test('format', (t) => {
 })
 
 test('format with options', (t) => {
-  t.plan(2)
-
   const url = new URL('https://user:pass@sub.host.com:8080')
 
   t.is(url.toString(), 'https://user:pass@sub.host.com:8080/')
@@ -130,8 +94,6 @@ test('format with options', (t) => {
 })
 
 test('suppport ws', (t) => {
-  t.plan(2)
-
   const url = new URL('ws://localhost:2134')
 
   t.is(url.toString(), 'ws://localhost:2134/')
@@ -145,20 +107,14 @@ const map = {
 const def = 'ws'
 
 test('suppport ws in relative', (t) => {
-  t.plan(1)
-
   t.is(relative('ws://localhost:2134'), 'ws://localhost:2134/')
 })
 
 test('suppport ws in relative with options', (t) => {
-  t.plan(1)
-
   t.is(relative('ws://localhost:2134', {}, map, def), 'ws://localhost:2134/')
 })
 
 test('suppport wss in relative from an http location object', (t) => {
-  t.plan(1)
-
   t.is(
     relative(
       'wss://localhost:4433',
@@ -179,8 +135,6 @@ test('suppport wss in relative from an http location object', (t) => {
 })
 
 test('test handle ipv6 with brackets', (t) => {
-  t.plan(1)
-
   t.is(relative('wss://[::1]:4002', {}, map, def), 'wss://[::1]:4002/')
 })
 
@@ -194,8 +148,6 @@ test('map from a relative url to one for this domain', (t) => {
 
   t.equal(relative('//bar.com', location, map, def), 'ws://bar.com/')
   t.equal(relative('/this', location, map, def), 'ws://foo.com/this')
-
-  t.end()
 })
 
 test('same path works on dev and deployed', (t) => {
@@ -235,8 +187,6 @@ test('same path works on dev and deployed', (t) => {
     ),
     'wss://server.com/'
   )
-
-  t.end()
 })
 
 test('universal url still works', (t) => {
@@ -253,7 +203,6 @@ test('universal url still works', (t) => {
     relative('wss://localhost/', location, map, def),
     'wss://localhost/'
   )
-  t.end()
 })
 
 test('protocol defaults to not change', (t) => {
@@ -278,8 +227,6 @@ test('protocol defaults to not change', (t) => {
     }),
     'https://server.com/'
   )
-
-  t.end()
 })
 
 test('query string, if you want that!', (t) => {
@@ -293,11 +240,9 @@ test('query string, if you want that!', (t) => {
     relative('?whatever=true', location, map, def),
     'ws://localhost:8000/foo/bar?whatever=true'
   )
-
-  t.end()
 })
 
-test.skip('same domain, different port', (t) => {
+skip('same domain, different port', (t) => {
   t.equal(
     relative(
       '//:9999/okay',
@@ -325,8 +270,6 @@ test.skip('same domain, different port', (t) => {
     ),
     'ws://server.com:9999/okay'
   )
-
-  t.end()
 })
 
 test("don't mess with url that starts out absolute", (t) => {
@@ -354,6 +297,4 @@ test("don't mess with url that starts out absolute", (t) => {
     ),
     'ws://localhost:8000/'
   )
-
-  t.end()
 })

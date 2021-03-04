@@ -1,39 +1,71 @@
 name: tests
 env:
-  CI: true
-  FORCE_COLOR: 1
+    CI: true
+    FORCE_COLOR: 1
 on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+    push:
+        branches: [master]
+    pull_request:
+        branches: [master]
 
 jobs:
-  chromium_linux:
-    name: "Chromium Linux"
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-    - uses: microsoft/playwright-github-action@v1
-    - uses: bahmutov/npm-install@v1
-    - run: yarn run check
-    - uses: codecov/codecov-action@v1
+    chromium_linux:
+        name: "Chromium Linux"
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - uses: microsoft/playwright-github-action@v1
+            - uses: bahmutov/npm-install@v1
+            - run: yarn run check
+            - uses: codecov/codecov-action@v1
 
+    webkit_macos:
+        name: "Webkit Mac"
+        runs-on: macos-latest
+        steps:
+            - uses: actions/checkout@v2
+            - uses: microsoft/playwright-github-action@v1
+            - uses: bahmutov/npm-install@v1
+            - run: npx playwright-test --runner zora --browser webkit
 
-  webkit_macos:
-    name: "Webkit Mac"
-    runs-on: macos-latest
-    steps:
-    - uses: actions/checkout@v2
-    - uses: microsoft/playwright-github-action@v1
-    - uses: bahmutov/npm-install@v1
-    - run: npx playwright-test --runner tape --browser webkit
+    firefox_linux:
+        name: "Firefox Linux"
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - uses: microsoft/playwright-github-action@v1
+            - uses: bahmutov/npm-install@v1
+            - run: npx playwright-test --runner zora --browser firefox
 
-  firefox_linux:
-    name: "Firefox Linux"
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-    - uses: microsoft/playwright-github-action@v1
-    - uses: bahmutov/npm-install@v1
-    - run: npx playwright-test --runner tape --browser firefox
+    react-native-android:
+        name: "React Native: Android"
+        runs-on: macos-latest
+        steps:
+            - uses: actions/checkout@v2
+            - uses: bahmutov/npm-install@v1
+            - uses: reactivecircus/android-emulator-runner@v2
+              with:
+                  api-level: 28
+                  target: default
+                  arch: x86_64
+                  profile: pixel
+                  avd-name: google-pixel
+                  script: |
+                      npx rn-test --platform android --emulator google-pixel test.js
+
+    react-native-ios:
+        name: "React Native: iOS"
+        runs-on: macos-latest
+        steps:
+            - uses: actions/checkout@v2
+            - uses: bahmutov/npm-install@v1
+            - name: Create and run iOS simulator
+              run: |
+                  SIMULATOR_RUNTIME=$(echo "iOS 14.4" | sed 's/[ \.]/-/g')
+                  SIMULATOR_ID=$(xcrun simctl create "iPhone 11" com.apple.CoreSimulator.SimDeviceType.iPhone-11 com.apple.CoreSimulator.SimRuntime.$SIMULATOR_RUNTIME)
+                  echo "IOS_SIMULATOR=$SIMULATOR_ID" >> $GITHUB_ENV
+                  xcrun simctl boot $SIMULATOR_ID &
+            - run: npx rn-test --platform ios --simulator 'iPhone 11 (14.4)' --rn 0.62.0 test.js
+            - name: Shutdown iOS simulator
+              run: |
+                  xcrun simctl shutdown $IOS_SIMULATOR
