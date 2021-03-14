@@ -7,7 +7,7 @@
   "license": "MIT",
   "main": "index.js",
   "engines": {
-    "node": ">=14"
+    "node": ">=12"
   },
   "browser": {
     "./src/url.js": "./src/url-browser.js"
