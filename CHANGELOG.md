@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.1.5](https://www.github.com/hugomrdias/iso-url/compare/v1.1.4...v1.1.5) (2021-03-14)
+
+
+### Bug Fixes
+
+* revert engine to node 12 ([a90f7e7](https://www.github.com/hugomrdias/iso-url/commit/a90f7e7e25d3b1c272ae4bf2389187c98d71c3ad))
+
 ### [1.1.4](https://www.github.com/hugomrdias/iso-url/compare/v1.1.3...v1.1.4) (2021-03-04)
 
 
