@@ -1684,9 +1684,9 @@ es6-error@^4.0.1:
   version "4.1.1"
   resolved "https://registry.npmjs.org/es6-error/-/es6-error-4.1.1.tgz"
 
-esbuild@^0.8.46:
-  version "0.8.54"
-  resolved "https://registry.npmjs.org/esbuild/-/esbuild-0.8.54.tgz"
+esbuild@^0.9.2:
+  version "0.9.2"
+  resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.9.2.tgz#7e9fde247c913ed8ee059e2648b0c53f7d00abe5"
 
 escalade@^3.1.1:
   version "3.1.1"
@@ -3093,9 +3093,9 @@ lodash.zip@^4.2.0:
   version "4.2.0"
   resolved "https://registry.npmjs.org/lodash.zip/-/lodash.zip-4.2.0.tgz"
 
-lodash@^4.17.10, lodash@^4.17.12, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.20:
-  version "4.17.20"
-  resolved "https://registry.npmjs.org/lodash/-/lodash-4.17.20.tgz"
+lodash@^4.17.10, lodash@^4.17.12, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.20, lodash@^4.17.21:
+  version "4.17.21"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
 
 log-symbols@^1.0.2:
   version "1.0.2"
@@ -3873,9 +3873,9 @@ pkg-dir@^5.0.0:
   dependencies:
     find-up "^5.0.0"
 
-playwright-core@1.9.1:
-  version "1.9.1"
-  resolved "https://registry.yarnpkg.com/playwright-core/-/playwright-core-1.9.1.tgz#c3b9160f54318f1657e29309df5a5419c5574479"
+playwright-core@1.9.2:
+  version "1.9.2"
+  resolved "https://registry.yarnpkg.com/playwright-core/-/playwright-core-1.9.2.tgz#cef51ac7e9b862528a860b6531628598b485ac17"
   dependencies:
     commander "^6.1.0"
     debug "^4.1.1"
@@ -3892,20 +3892,20 @@ playwright-core@1.9.1:
     ws "^7.3.1"
 
 playwright-test@^2.0.2:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/playwright-test/-/playwright-test-2.0.3.tgz#ca35798fb8ec5b732ca9d8c2354f0f26dc9f4fb7"
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/playwright-test/-/playwright-test-2.1.0.tgz#8049f4989b50d334f1c9fb9b22e3f401ca8723cb"
   dependencies:
     camelcase "^6.2.0"
     delay "^5.0.0"
-    esbuild "^0.8.46"
+    esbuild "^0.9.2"
     globby "^11.0.2"
     kleur "^4.1.4"
     lilconfig "^2.0.2"
-    lodash "^4.17.20"
+    lodash "^4.17.21"
     merge-options "^3.0.4"
     ora "^5.3.0"
     path-browserify "^1.0.1"
-    playwright-core "1.9.1"
+    playwright-core "1.9.2"
     polka "^0.5.2"
     premove "^3.0.1"
     process "^0.11.10"
