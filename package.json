@@ -41,7 +41,7 @@
     "nyc": "^15.0.0",
     "playwright-test": "^2.0.2",
     "react-native-polyfill-globals": "^3.1.0",
-    "react-native-test-runner": "^3.0.2",
+    "react-native-test-runner": "^4.0.0",
     "sirv-cli": "^1.0.11",
     "tap-spec": "^5.0.0",
     "typescript": "^4.2.2",
