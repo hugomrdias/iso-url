@@ -1106,8 +1106,8 @@ builtins@^1.0.3:
   resolved "https://registry.npmjs.org/builtins/-/builtins-1.0.3.tgz"
 
 c8@^7.6.0:
-  version "7.6.0"
-  resolved "https://registry.npmjs.org/c8/-/c8-7.6.0.tgz"
+  version "7.7.0"
+  resolved "https://registry.yarnpkg.com/c8/-/c8-7.7.0.tgz#22241fa5a65c8d059e0c18f4eb845e6d8244c643"
   dependencies:
     "@bcoe/v8-coverage" "^0.2.3"
     "@istanbuljs/schema" "^0.1.2"
@@ -1120,8 +1120,8 @@ c8@^7.6.0:
     rimraf "^3.0.0"
     test-exclude "^6.0.0"
     v8-to-istanbul "^7.1.0"
-    yargs "^16.0.0"
-    yargs-parser "^20.0.0"
+    yargs "^16.2.0"
+    yargs-parser "^20.2.7"
 
 cache-base@^1.0.1:
   version "1.0.1"
@@ -5175,9 +5175,9 @@ yargs-parser@^18.1.2:
     camelcase "^5.0.0"
     decamelize "^1.2.0"
 
-yargs-parser@^20.0.0, yargs-parser@^20.2.2, yargs-parser@^20.2.3:
-  version "20.2.6"
-  resolved "https://registry.npmjs.org/yargs-parser/-/yargs-parser-20.2.6.tgz"
+yargs-parser@^20.2.2, yargs-parser@^20.2.3, yargs-parser@^20.2.7:
+  version "20.2.7"
+  resolved "https://registry.yarnpkg.com/yargs-parser/-/yargs-parser-20.2.7.tgz#61df85c113edfb5a7a4e36eb8aa60ef423cbc90a"
 
 yargs@^15.0.2, yargs@^15.4.1:
   version "15.4.1"
@@ -5195,9 +5195,9 @@ yargs@^15.0.2, yargs@^15.4.1:
     y18n "^4.0.0"
     yargs-parser "^18.1.2"
 
-yargs@^16.0.0:
+yargs@^16.2.0:
   version "16.2.0"
-  resolved "https://registry.npmjs.org/yargs/-/yargs-16.2.0.tgz"
+  resolved "https://registry.yarnpkg.com/yargs/-/yargs-16.2.0.tgz#1c82bf0f6b6a66eafce7ef30e376f49a12477f66"
   dependencies:
     cliui "^7.0.2"
     escalade "^3.1.1"
