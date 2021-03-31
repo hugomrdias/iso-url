@@ -3714,6 +3714,10 @@ p-retry@^4.2.0:
     "@types/retry" "^0.12.0"
     retry "^0.12.0"
 
+p-tap@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/p-tap/-/p-tap-3.1.0.tgz#ceea85e92164e12b1c2b1caf78b4dc2ee51c9b5f"
+
 p-timeout@^3.1.0:
   version "3.2.0"
   resolved "https://registry.npmjs.org/p-timeout/-/p-timeout-3.2.0.tgz"
@@ -3956,12 +3960,6 @@ pretty-ms@^2.1.0:
     parse-ms "^1.0.0"
     plur "^1.0.0"
 
-process-exists@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.npmjs.org/process-exists/-/process-exists-4.0.0.tgz"
-  dependencies:
-    ps-list "^6.3.0"
-
 process-nextick-args@~1.0.6:
   version "1.0.7"
   resolved "https://registry.npmjs.org/process-nextick-args/-/process-nextick-args-1.0.7.tgz"
@@ -3995,10 +3993,6 @@ proper-lockfile@^4.1.1:
 proxy-from-env@^1.1.0:
   version "1.1.0"
   resolved "https://registry.npmjs.org/proxy-from-env/-/proxy-from-env-1.1.0.tgz"
-
-ps-list@^6.3.0:
-  version "6.3.0"
-  resolved "https://registry.npmjs.org/ps-list/-/ps-list-6.3.0.tgz"
 
 pump@^3.0.0:
   version "3.0.0"
@@ -4038,9 +4032,9 @@ react-native-polyfill-globals@^3.1.0:
   version "3.1.0"
   resolved "https://registry.npmjs.org/react-native-polyfill-globals/-/react-native-polyfill-globals-3.1.0.tgz"
 
-react-native-test-runner@^3.0.2:
-  version "3.0.2"
-  resolved "https://registry.npmjs.org/react-native-test-runner/-/react-native-test-runner-3.0.2.tgz"
+react-native-test-runner@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/react-native-test-runner/-/react-native-test-runner-5.0.0.tgz#0f6e2005aa57b5b4004d04324b355617475f7c1a"
   dependencies:
     "@babel/plugin-proposal-async-generator-functions" "^7.12.12"
     babel-plugin-transform-inline-environment-variables "^0.4.3"
@@ -4053,12 +4047,13 @@ react-native-test-runner@^3.0.2:
     is-uuid "^1.0.2"
     lilconfig "^2.0.2"
     meow "^8.0.0"
+    merge-options "^3.0.4"
     metro-react-native-babel-preset "^0.64.0"
     ora "^5.1.0"
     p-retry "^4.2.0"
+    p-tap "^3.1.0"
     patch-package "^6.2.2"
     pico-signals "^1.0.0"
-    process-exists "^4.0.0"
     read-pkg "^5.2.0"
     semver "^7.3.4"
     tempy "^1.0.0"
