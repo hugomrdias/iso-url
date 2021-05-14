@@ -41,7 +41,7 @@
     "eslint-config-ipfs": "^2.0.0",
     "np": "^7.4.0",
     "nyc": "^15.0.0",
-    "playwright-test": "^2.0.2",
+    "playwright-test": "^4.1.0",
     "react-native-polyfill-globals": "^3.1.0",
     "react-native-test-runner": "^5.0.0",
     "sirv-cli": "^1.0.11",
