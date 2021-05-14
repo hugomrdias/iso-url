@@ -5524,5 +5524,5 @@ yocto-queue@^0.1.0:
   resolved "https://registry.npmjs.org/yocto-queue/-/yocto-queue-0.1.0.tgz"
 
 zora@^4.0.2:
-  version "4.0.2"
-  resolved "https://registry.npmjs.org/zora/-/zora-4.0.2.tgz"
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/zora/-/zora-4.1.0.tgz#a0db6979ac315604df87794edaa72a71456ff4ce"
