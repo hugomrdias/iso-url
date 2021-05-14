@@ -663,10 +663,6 @@
   version "4.0.0"
   resolved "https://registry.npmjs.org/@types/http-cache-semantics/-/http-cache-semantics-4.0.0.tgz"
 
-"@types/is-windows@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.npmjs.org/@types/is-windows/-/is-windows-1.0.0.tgz"
-
 "@types/istanbul-lib-coverage@^2.0.1":
   version "2.0.3"
   resolved "https://registry.npmjs.org/@types/istanbul-lib-coverage/-/istanbul-lib-coverage-2.0.3.tgz"
@@ -1123,22 +1119,21 @@ builtins@^1.0.3:
   resolved "https://registry.npmjs.org/builtins/-/builtins-1.0.3.tgz"
 
 c8@^7.6.0:
-  version "7.6.0"
-  resolved "https://registry.npmjs.org/c8/-/c8-7.6.0.tgz"
+  version "7.7.2"
+  resolved "https://registry.yarnpkg.com/c8/-/c8-7.7.2.tgz#30ff37b8125d96cab3eb065895a0b68dbc495a0f"
   dependencies:
     "@bcoe/v8-coverage" "^0.2.3"
     "@istanbuljs/schema" "^0.1.2"
     find-up "^5.0.0"
     foreground-child "^2.0.0"
-    furi "^2.0.0"
     istanbul-lib-coverage "^3.0.0"
     istanbul-lib-report "^3.0.0"
     istanbul-reports "^3.0.2"
     rimraf "^3.0.0"
     test-exclude "^6.0.0"
     v8-to-istanbul "^7.1.0"
-    yargs "^16.0.0"
-    yargs-parser "^20.0.0"
+    yargs "^16.2.0"
+    yargs-parser "^20.2.7"
 
 cache-base@^1.0.1:
   version "1.0.1"
@@ -2279,13 +2274,6 @@ function-bind@^1.1.1:
 functional-red-black-tree@^1.0.1:
   version "1.0.1"
   resolved "https://registry.npmjs.org/functional-red-black-tree/-/functional-red-black-tree-1.0.1.tgz"
-
-furi@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.npmjs.org/furi/-/furi-2.0.0.tgz"
-  dependencies:
-    "@types/is-windows" "^1.0.0"
-    is-windows "^1.0.2"
 
 gensync@^1.0.0-beta.1:
   version "1.0.0-beta.1"
@@ -5464,9 +5452,9 @@ yargs-parser@^18.1.2:
     camelcase "^5.0.0"
     decamelize "^1.2.0"
 
-yargs-parser@^20.0.0, yargs-parser@^20.2.2, yargs-parser@^20.2.3:
-  version "20.2.6"
-  resolved "https://registry.npmjs.org/yargs-parser/-/yargs-parser-20.2.6.tgz"
+yargs-parser@^20.2.2, yargs-parser@^20.2.3, yargs-parser@^20.2.7:
+  version "20.2.7"
+  resolved "https://registry.yarnpkg.com/yargs-parser/-/yargs-parser-20.2.7.tgz#61df85c113edfb5a7a4e36eb8aa60ef423cbc90a"
 
 yargs@^15.0.2, yargs@^15.4.1:
   version "15.4.1"
@@ -5484,9 +5472,9 @@ yargs@^15.0.2, yargs@^15.4.1:
     y18n "^4.0.0"
     yargs-parser "^18.1.2"
 
-yargs@^16.0.0:
+yargs@^16.2.0:
   version "16.2.0"
-  resolved "https://registry.npmjs.org/yargs/-/yargs-16.2.0.tgz"
+  resolved "https://registry.yarnpkg.com/yargs/-/yargs-16.2.0.tgz#1c82bf0f6b6a66eafce7ef30e376f49a12477f66"
   dependencies:
     cliui "^7.0.2"
     escalade "^3.1.1"
