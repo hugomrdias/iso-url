@@ -616,9 +616,9 @@
   version "0.5.0"
   resolved "https://registry.npmjs.org/@polka/url/-/url-0.5.0.tgz"
 
-"@polka/url@^1.0.0-next.9":
-  version "1.0.0-next.11"
-  resolved "https://registry.npmjs.org/@polka/url/-/url-1.0.0-next.11.tgz"
+"@polka/url@^1.0.0-next.15":
+  version "1.0.0-next.15"
+  resolved "https://registry.yarnpkg.com/@polka/url/-/url-1.0.0-next.15.tgz#6a9d143f7f4f49db2d782f9e1c8839a29b43ae23"
 
 "@samverschueren/stream-to-observable@^0.3.0", "@samverschueren/stream-to-observable@^0.3.1":
   version "0.3.1"
@@ -864,6 +864,10 @@ ansi-regex@^4.1.0:
 ansi-regex@^5.0.0:
   version "5.0.0"
   resolved "https://registry.npmjs.org/ansi-regex/-/ansi-regex-5.0.0.tgz"
+
+ansi-regex@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/ansi-regex/-/ansi-regex-6.0.0.tgz#ecc7f5933cbe5ac7b33e209a5ff409ab1669c6b2"
 
 ansi-styles@^2.2.1:
   version "2.2.1"
@@ -1756,9 +1760,9 @@ es6-error@^4.0.1:
   version "4.1.1"
   resolved "https://registry.npmjs.org/es6-error/-/es6-error-4.1.1.tgz"
 
-esbuild@0.11.20:
-  version "0.11.20"
-  resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.11.20.tgz#7cefa1aee8b372c184e42457885f7ce5d3e62a1e"
+esbuild@0.12.15:
+  version "0.12.15"
+  resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.12.15.tgz#9d99cf39aeb2188265c5983e983e236829f08af0"
 
 escalade@^3.1.1:
   version "3.1.1"
@@ -1998,7 +2002,7 @@ esutils@^2.0.2:
   version "2.0.3"
   resolved "https://registry.npmjs.org/esutils/-/esutils-2.0.3.tgz"
 
-events@^3.1.0:
+events@^3.1.0, events@^3.3.0:
   version "3.3.0"
   resolved "https://registry.npmjs.org/events/-/events-3.3.0.tgz"
 
@@ -2360,9 +2364,9 @@ globals@^12.1.0:
   dependencies:
     type-fest "^0.8.1"
 
-globby@^11.0.1, globby@^11.0.3:
-  version "11.0.3"
-  resolved "https://registry.yarnpkg.com/globby/-/globby-11.0.3.tgz#9b1f0cb523e171dd1ad8c7b2a9fb4b644b9593cb"
+globby@^11.0.1, globby@^11.0.4:
+  version "11.0.4"
+  resolved "https://registry.yarnpkg.com/globby/-/globby-11.0.4.tgz#2cbaff77c2f2a62e71e9b2813a67b97a3a3001a5"
   dependencies:
     array-union "^2.1.0"
     dir-glob "^3.0.1"
@@ -3142,9 +3146,9 @@ levn@^0.4.1:
     prelude-ls "^1.2.1"
     type-check "~0.4.0"
 
-lilconfig@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.npmjs.org/lilconfig/-/lilconfig-2.0.2.tgz"
+lilconfig@^2.0.2, lilconfig@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/lilconfig/-/lilconfig-2.0.3.tgz#68f3005e921dafbd2a2afb48379986aa6d2579fd"
 
 lines-and-columns@^1.1.6:
   version "1.1.6"
@@ -3760,9 +3764,9 @@ optionator@^0.9.1:
     type-check "^0.4.0"
     word-wrap "^1.2.3"
 
-ora@^5.1.0, ora@^5.4.0:
-  version "5.4.0"
-  resolved "https://registry.yarnpkg.com/ora/-/ora-5.4.0.tgz#42eda4855835b9cd14d33864c97a3c95a3f56bf4"
+ora@^5.1.0, ora@^5.4.1:
+  version "5.4.1"
+  resolved "https://registry.yarnpkg.com/ora/-/ora-5.4.1.tgz#1b2678426af4ac4a509008e5e4ac9e9959db9e18"
   dependencies:
     bl "^4.1.0"
     chalk "^4.1.0"
@@ -3885,7 +3889,7 @@ p-tap@^3.1.0:
   version "3.1.0"
   resolved "https://registry.npmjs.org/p-tap/-/p-tap-3.1.0.tgz"
 
-p-timeout@^3.0.0, p-timeout@^3.1.0:
+p-timeout@^3.1.0:
   version "3.2.0"
   resolved "https://registry.npmjs.org/p-timeout/-/p-timeout-3.2.0.tgz"
   dependencies:
@@ -3895,6 +3899,10 @@ p-timeout@^4.1.0:
   version "4.1.0"
   resolved "https://registry.npmjs.org/p-timeout/-/p-timeout-4.1.0.tgz"
 
+p-timeout@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/p-timeout/-/p-timeout-5.0.0.tgz#0f5dc08422e7243f8317669c461734cd1257a8dc"
+
 p-try@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/p-try/-/p-try-1.0.0.tgz"
@@ -3903,11 +3911,11 @@ p-try@^2.0.0:
   version "2.2.0"
   resolved "https://registry.npmjs.org/p-try/-/p-try-2.2.0.tgz"
 
-p-wait-for@3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/p-wait-for/-/p-wait-for-3.2.0.tgz#640429bcabf3b0dd9f492c31539c5718cb6a3f1f"
+p-wait-for@4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/p-wait-for/-/p-wait-for-4.0.0.tgz#b4f488eef4365c295f6b21b852b95752d077b670"
   dependencies:
-    p-timeout "^3.0.0"
+    p-timeout "^5.0.0"
 
 package-hash@^4.0.0:
   version "4.0.0"
@@ -4050,9 +4058,9 @@ pkg-dir@^5.0.0:
   dependencies:
     find-up "^5.0.0"
 
-playwright-core@1.11.0:
-  version "1.11.0"
-  resolved "https://registry.yarnpkg.com/playwright-core/-/playwright-core-1.11.0.tgz#992c24303ff84cc66022a3327c24026fc433a66a"
+playwright-core@1.12.3:
+  version "1.12.3"
+  resolved "https://registry.yarnpkg.com/playwright-core/-/playwright-core-1.12.3.tgz#897981da4ef674fbb1b35da3d4b9094bfa804d0e"
   dependencies:
     commander "^6.1.0"
     debug "^4.1.1"
@@ -4066,37 +4074,38 @@ playwright-core@1.11.0:
     proxy-from-env "^1.1.0"
     rimraf "^3.0.2"
     stack-utils "^2.0.3"
-    ws "^7.3.1"
+    ws "^7.4.6"
     yazl "^2.5.1"
 
-playwright-test@^4.1.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/playwright-test/-/playwright-test-4.1.0.tgz#25097cb7ad908ad61e2b7b20826606a4ade7203a"
+playwright-test@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/playwright-test/-/playwright-test-6.0.0.tgz#1d3c51ec9181144404d20525c7c0db8c0a52263c"
   dependencies:
     buffer "^6.0.3"
     camelcase "^6.2.0"
-    esbuild "0.11.20"
-    globby "^11.0.3"
+    esbuild "0.12.15"
+    events "^3.3.0"
+    globby "^11.0.4"
     kleur "^4.1.4"
-    lilconfig "^2.0.2"
+    lilconfig "^2.0.3"
     lodash "^4.17.21"
     merge-options "^3.0.4"
-    ora "^5.4.0"
-    p-wait-for "3.2.0"
+    ora "^5.4.1"
+    p-wait-for "4.0.0"
     path-browserify "^1.0.1"
-    playwright-core "1.11.0"
+    playwright-core "1.12.3"
     polka "^0.5.2"
     premove "^3.0.1"
     process "^0.11.10"
     sade "^1.7.4"
-    sirv "^1.0.11"
+    sirv "^1.0.12"
     source-map "0.6.1"
     stream-browserify "^3.0.0"
-    strip-ansi "^6.0.0"
+    strip-ansi "^7.0.0"
     tape "^5.2.2"
     tempy "^1.0.1"
     test-exclude "^6.0.0"
-    v8-to-istanbul "^7.1.2"
+    v8-to-istanbul "^8.0.0"
 
 plur@^1.0.0:
   version "1.0.0"
@@ -4631,11 +4640,11 @@ sirv-cli@^1.0.11:
     sirv "^1.0.11"
     tinydate "^1.0.0"
 
-sirv@^1.0.11:
-  version "1.0.11"
-  resolved "https://registry.npmjs.org/sirv/-/sirv-1.0.11.tgz"
+sirv@^1.0.11, sirv@^1.0.12:
+  version "1.0.12"
+  resolved "https://registry.yarnpkg.com/sirv/-/sirv-1.0.12.tgz#d816c882b35489b3c63290e2f455ae3eccd5f652"
   dependencies:
-    "@polka/url" "^1.0.0-next.9"
+    "@polka/url" "^1.0.0-next.15"
     mime "^2.3.1"
     totalist "^1.0.0"
 
@@ -4875,6 +4884,12 @@ strip-ansi@^6.0.0:
   resolved "https://registry.npmjs.org/strip-ansi/-/strip-ansi-6.0.0.tgz"
   dependencies:
     ansi-regex "^5.0.0"
+
+strip-ansi@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/strip-ansi/-/strip-ansi-7.0.0.tgz#1dc49b980c3a4100366617adac59327eefdefcb0"
+  dependencies:
+    ansi-regex "^6.0.0"
 
 strip-bom@^3.0.0:
   version "3.0.0"
@@ -5293,9 +5308,17 @@ v8-compile-cache@^2.0.3:
   version "2.2.0"
   resolved "https://registry.npmjs.org/v8-compile-cache/-/v8-compile-cache-2.2.0.tgz"
 
-v8-to-istanbul@^7.1.0, v8-to-istanbul@^7.1.2:
+v8-to-istanbul@^7.1.0:
   version "7.1.2"
   resolved "https://registry.yarnpkg.com/v8-to-istanbul/-/v8-to-istanbul-7.1.2.tgz#30898d1a7fa0c84d225a2c1434fb958f290883c1"
+  dependencies:
+    "@types/istanbul-lib-coverage" "^2.0.1"
+    convert-source-map "^1.6.0"
+    source-map "^0.7.3"
+
+v8-to-istanbul@^8.0.0:
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/v8-to-istanbul/-/v8-to-istanbul-8.0.0.tgz#4229f2a99e367f3f018fa1d5c2b8ec684667c69c"
   dependencies:
     "@types/istanbul-lib-coverage" "^2.0.1"
     convert-source-map "^1.6.0"
@@ -5417,9 +5440,9 @@ write-file-atomic@^3.0.0:
     signal-exit "^3.0.2"
     typedarray-to-buffer "^3.1.5"
 
-ws@^7.3.1:
-  version "7.4.3"
-  resolved "https://registry.npmjs.org/ws/-/ws-7.4.3.tgz"
+ws@^7.4.6:
+  version "7.5.2"
+  resolved "https://registry.yarnpkg.com/ws/-/ws-7.5.2.tgz#09cc8fea3bec1bc5ed44ef51b42f945be36900f6"
 
 xdg-basedir@^4.0.0:
   version "4.0.0"
