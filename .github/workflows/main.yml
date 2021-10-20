@@ -19,10 +19,7 @@ jobs:
       - uses: bahmutov/npm-install@v1
       - run: npx playwright install-deps chromium
       - run: yarn run check
-      - uses: codecov/codecov-action@v2
-        with:
-          directory: ./nyc_output
-          verbose: true
+      - uses: codecov/codecov-action@v1
 
   webkit_macos:
     name: "Webkit Mac"
