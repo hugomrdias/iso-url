@@ -616,9 +616,9 @@
   version "0.5.0"
   resolved "https://registry.npmjs.org/@polka/url/-/url-0.5.0.tgz"
 
-"@polka/url@^1.0.0-next.9":
-  version "1.0.0-next.11"
-  resolved "https://registry.npmjs.org/@polka/url/-/url-1.0.0-next.11.tgz"
+"@polka/url@^1.0.0-next.15":
+  version "1.0.0-next.15"
+  resolved "https://registry.yarnpkg.com/@polka/url/-/url-1.0.0-next.15.tgz#6a9d143f7f4f49db2d782f9e1c8839a29b43ae23"
 
 "@samverschueren/stream-to-observable@^0.3.0", "@samverschueren/stream-to-observable@^0.3.1":
   version "0.3.1"
@@ -4619,8 +4619,8 @@ signal-exit@^3.0.2, signal-exit@^3.0.3:
   resolved "https://registry.npmjs.org/signal-exit/-/signal-exit-3.0.3.tgz"
 
 sirv-cli@^1.0.11:
-  version "1.0.11"
-  resolved "https://registry.npmjs.org/sirv-cli/-/sirv-cli-1.0.11.tgz"
+  version "1.0.12"
+  resolved "https://registry.yarnpkg.com/sirv-cli/-/sirv-cli-1.0.12.tgz#10c5240831879422dba42bdcdf9c09dcc3314615"
   dependencies:
     console-clear "^1.1.0"
     get-port "^3.2.0"
@@ -4628,14 +4628,14 @@ sirv-cli@^1.0.11:
     local-access "^1.0.1"
     sade "^1.6.0"
     semiver "^1.0.0"
-    sirv "^1.0.11"
+    sirv "^1.0.12"
     tinydate "^1.0.0"
 
-sirv@^1.0.11:
-  version "1.0.11"
-  resolved "https://registry.npmjs.org/sirv/-/sirv-1.0.11.tgz"
+sirv@^1.0.11, sirv@^1.0.12:
+  version "1.0.12"
+  resolved "https://registry.yarnpkg.com/sirv/-/sirv-1.0.12.tgz#d816c882b35489b3c63290e2f455ae3eccd5f652"
   dependencies:
-    "@polka/url" "^1.0.0-next.9"
+    "@polka/url" "^1.0.0-next.15"
     mime "^2.3.1"
     totalist "^1.0.0"
 
