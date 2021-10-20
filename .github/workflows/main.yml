@@ -21,7 +21,8 @@ jobs:
       - run: yarn run check
       - uses: codecov/codecov-action@v2
         with:
-          files: ./nyc_output/coverage-final.json,./nyc_output/coverage-pw.json
+          directory: ./nyc_output
+          verbose: true
 
   webkit_macos:
     name: "Webkit Mac"
