@@ -20,6 +20,8 @@ jobs:
       - run: npx playwright install-deps chromium
       - run: yarn run check
       - uses: codecov/codecov-action@v2
+        with:
+          files: ./nyc_output/coverage-final.json,./nyc_output/coverage-pw.json
 
   webkit_macos:
     name: "Webkit Mac"
