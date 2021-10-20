@@ -3,9 +3,6 @@
 const { test, skip } = require('zora')
 const { URL, URLSearchParams, relative } = require('./index.js')
 
-const isFirefox =
-    typeof navigator !== 'undefined' &&
-    /^(?!.*Seamonkey)(?=.*Firefox).*/i.test(navigator.userAgent)
 const isBrowser =
     typeof window === 'object' &&
     typeof document === 'object' &&
@@ -68,15 +65,9 @@ test('last slash', (t) => {
 test('throw with invalid href assign', (t) => {
   const url = new URL('https://user:pass@sub.host.com:8080')
 
-  if (isBrowser && !isFirefox) {
-    // browser doesn't throw but cleans the instance
+  t.throws(() => {
     url.href = '/ll'
-    t.ok(url.host === '' || url.host === 'localhost:3000')
-  } else {
-    t.throws(() => {
-      url.href = '/ll'
-    }, Error)
-  }
+  }, Error)
 })
 
 test('format', (t) => {

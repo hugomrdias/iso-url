@@ -4,9 +4,11 @@ env:
   FORCE_COLOR: 1
 on:
   push:
-    branches: [master]
+    branches:
+      - master
   pull_request:
-    branches: [master]
+    branches:
+      - master
 
 jobs:
   chromium_linux:
@@ -14,8 +16,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: microsoft/playwright-github-action@v1
       - uses: bahmutov/npm-install@v1
+      - run: npx playwright install-deps chromium
       - run: yarn run check
       - uses: codecov/codecov-action@v1
 
@@ -24,7 +26,6 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: microsoft/playwright-github-action@v1
       - uses: bahmutov/npm-install@v1
       - run: npx playwright-test --runner zora --browser webkit
 
@@ -33,40 +34,63 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: microsoft/playwright-github-action@v1
       - uses: bahmutov/npm-install@v1
       - run: npx playwright-test --runner zora --browser firefox
 
-  react-native-android:
-    name: "React Native: Android"
-    runs-on: macos-latest
+  release:
+    runs-on: ubuntu-latest
+    needs: [chromium_linux, webkit_macos, firefox_linux]
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
     steps:
-      - uses: actions/checkout@v2
-      - uses: bahmutov/npm-install@v1
-      - uses: reactivecircus/android-emulator-runner@v2
+      - uses: GoogleCloudPlatform/release-please-action@v2
+        id: release
         with:
-          api-level: 28
-          target: default
-          arch: x86_64
-          profile: pixel
-          avd-name: google-pixel
-          script: |
-            npx rn-test --platform android test.js
-
-  react-native-ios:
-    name: "React Native: iOS"
-    runs-on: macos-latest
-    steps:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          release-type: node
       - uses: actions/checkout@v2
-      - uses: bahmutov/npm-install@v1
-      - name: Create and run iOS simulator
-        id: setup-simulator
-        run: |
-          SIMULATOR_RUNTIME=$(echo "iOS 14.4" | sed 's/[ \.]/-/g')
-          SIMULATOR_ID=$(xcrun simctl create "iPhone 11" com.apple.CoreSimulator.SimDeviceType.iPhone-11 com.apple.CoreSimulator.SimRuntime.$SIMULATOR_RUNTIME)
-          echo "::set-output name=simulator_id::$SIMULATOR_ID"
-          xcrun simctl boot $SIMULATOR_ID &
-      - run: npx rn-test --platform ios --rn 0.62.0 test.js
-      - name: Shutdown iOS simulator
-        run: |
-          xcrun simctl shutdown ${{ steps.setup-simulator.outputs.simulator_id }}
+        if: ${{ steps.release.outputs.release_created }}
+      - uses: actions/setup-node@v2
+        if: ${{ steps.release.outputs.release_created }}
+        with:
+          node-version: 16
+          registry-url: "https://registry.npmjs.org"
+      - run: bahmutov/npm-install@v1
+        if: ${{ steps.release.outputs.release_created }}
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+        if: ${{ steps.release.outputs.release_created }}
+
+  # react-native-android:
+  #   name: "React Native: Android"
+  #   runs-on: macos-latest
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #     - uses: bahmutov/npm-install@v1
+  #     - uses: reactivecircus/android-emulator-runner@v2
+  #       with:
+  #         api-level: 28
+  #         target: default
+  #         arch: x86_64
+  #         profile: pixel
+  #         avd-name: google-pixel
+  #         script: |
+  #           npx rn-test --platform android test.js
+
+  # react-native-ios:
+  #   name: "React Native: iOS"
+  #   runs-on: macos-latest
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #     - uses: bahmutov/npm-install@v1
+  #     - name: Create and run iOS simulator
+  #       id: setup-simulator
+  #       run: |
+  #         SIMULATOR_RUNTIME=$(echo "iOS 14.4" | sed 's/[ \.]/-/g')
+  #         SIMULATOR_ID=$(xcrun simctl create "iPhone 11" com.apple.CoreSimulator.SimDeviceType.iPhone-11 com.apple.CoreSimulator.SimRuntime.$SIMULATOR_RUNTIME)
+  #         echo "::set-output name=simulator_id::$SIMULATOR_ID"
+  #         xcrun simctl boot $SIMULATOR_ID &
+  #     - run: npx rn-test --platform ios --rn 0.62.0 test.js
+  #     - name: Shutdown iOS simulator
+  #       run: |
+  #         xcrun simctl shutdown ${{ steps.setup-simulator.outputs.simulator_id }}
