@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.2.0](https://www.github.com/hugomrdias/iso-url/compare/v1.1.5...v1.2.0) (2021-10-20)
+
+
+### Features
+
+* update deps and ci ([#241](https://www.github.com/hugomrdias/iso-url/issues/241)) ([1763a5c](https://www.github.com/hugomrdias/iso-url/commit/1763a5cc1879f38d51e2ccd82768de927fe49080))
+
+
+### Bug Fixes
+
+* ignore location if not available ([#233](https://www.github.com/hugomrdias/iso-url/issues/233)) ([478ffbb](https://www.github.com/hugomrdias/iso-url/commit/478ffbb784c50155cbd2760d0d29e2b9097c6859))
+
 ### [1.1.5](https://www.github.com/hugomrdias/iso-url/compare/v1.1.4...v1.1.5) (2021-03-14)
 
 
