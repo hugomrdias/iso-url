@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.2.1](https://www.github.com/hugomrdias/iso-url/compare/v1.2.0...v1.2.1) (2021-10-20)
+
+
+### Bug Fixes
+
+* fix release ([5888875](https://www.github.com/hugomrdias/iso-url/commit/58888758a7caa8348ee464b8ca0d52d948d9b988))
+
 ## [1.2.0](https://www.github.com/hugomrdias/iso-url/compare/v1.1.5...v1.2.0) (2021-10-20)
 
 
