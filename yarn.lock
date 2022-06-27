@@ -1982,9 +1982,9 @@ escape-string-regexp@^4.0.0:
   resolved "https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-4.0.0.tgz"
 
 eslint-config-ipfs@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/eslint-config-ipfs/-/eslint-config-ipfs-2.0.1.tgz#cfc2b713eba4048e4833d67f07fc28098c014df0"
-  integrity sha512-O/61IVQ+v9t5Yz87RZcb7Hx3FApWeURTPd0YyWcg9FL963amWlmz4zWEWoA7R1rqSGe+WfTrYPHJ4wmydZe5sQ==
+  version "2.1.3"
+  resolved "https://registry.yarnpkg.com/eslint-config-ipfs/-/eslint-config-ipfs-2.1.3.tgz#08a997ebdcfc0cab3c6af83356a862c9929d82d3"
+  integrity sha512-4/NT1M2H4gvXOdZcCXND9e3NgoGco11KFZRAej3Iu990W01Vu16XEZFqRBT9EMQdBReYuJm6ApApMajiG+A7aA==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^4.1.0"
     "@typescript-eslint/parser" "^4.1.0"
