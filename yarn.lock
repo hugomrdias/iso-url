@@ -1981,10 +1981,10 @@ escape-string-regexp@^4.0.0:
   version "4.0.0"
   resolved "https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-4.0.0.tgz"
 
-eslint-config-ipfs@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/eslint-config-ipfs/-/eslint-config-ipfs-2.0.1.tgz#cfc2b713eba4048e4833d67f07fc28098c014df0"
-  integrity sha512-O/61IVQ+v9t5Yz87RZcb7Hx3FApWeURTPd0YyWcg9FL963amWlmz4zWEWoA7R1rqSGe+WfTrYPHJ4wmydZe5sQ==
+eslint-config-ipfs@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-ipfs/-/eslint-config-ipfs-3.0.0.tgz#6fa794df97ea708c8c3a5f21d1b170a3721d1f38"
+  integrity sha512-zfQIdcSn2I/dYFBjSy4TWmyUbXzgi3Lr06DJXRnfk5wicx8B0HXs/qlHLyMnM3N4U4aNQSHIp4P839Emcv2D6w==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^4.1.0"
     "@typescript-eslint/parser" "^4.1.0"
