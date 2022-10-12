@@ -38,7 +38,7 @@
   "devDependencies": {
     "c8": "^7.10.0",
     "eslint": "^7.20.0",
-    "eslint-config-ipfs": "^2.0.1",
+    "eslint-config-ipfs": "^3.1.2",
     "np": "^7.4.0",
     "nyc": "^15.0.0",
     "playwright-test": "^7.1.0",
